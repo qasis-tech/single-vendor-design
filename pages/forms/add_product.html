@@ -5,16 +5,19 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin</title>
+  <title>PolluxUI Admin</title>
   <!-- base:css -->
   <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -162,8 +165,8 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><a href="../forms/add_product.html"><i class="fa fa-plus" aria-hidden="true"></i></a></div>
-        <!-- <div id="theme-settings" class="settings-panel">
+        <div id="settings-trigger"><i class="typcn typcn-cog-outline"></i></div>
+        <div id="theme-settings" class="settings-panel">
           <i class="settings-close typcn typcn-times"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
           <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
@@ -177,7 +180,7 @@
             <div class="tiles dark"></div>
             <div class="tiles default"></div>
           </div>
-        </div> -->
+        </div>
       </div>
       <div id="right-sidebar" class="settings-panel">
         <i class="settings-close typcn typcn-times"></i>
@@ -359,7 +362,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/single-vendor-design/pages/tables/product_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Product</span>
               <!-- <i class="menu-arrow"></li> -->
@@ -389,145 +392,80 @@
         </ul>
       </nav>
       <!-- partial -->
-      <div class="main-panel">
+      <div class="main-panel">        
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
+            <div class="col-8 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Product</h4>
+                  <h4 class="card-title">Add Product</h4>
                   <!-- <p class="card-description">
-                    Add class <code>.table-hover</code>
+                    Basic form elements
                   </p> -->
-                  <div class="table-responsive">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Product Name</th>
-                          <th>Quantity</th>
-                          <th>Category</th>
-                          <th>Sub Category</th>
-                          <th>Updated date</th>
-                          <th>Image</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>#ID235</td>
-                          <td>Jacob</td>
-                          <td>24</td>
-                          <td>Dress</td>
-                          <td>Saree</td>
-                          <td>14-05-2022</td>
-                          <td></td>
-                          <!-- <td class="text-danger"> 28.76% <i class="typcn typcn-arrow-down-thick"></i></td>
-                          <td><button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-                          </td>
-                          <div class="toast position-fixed end-0 p-3" style="z-index: 11;bottom: 5em;right: 0;" data-delay="2000">
-                            <div class="toast-header">
-                              Toast Header
-                            </div>
-                            <div class="toast-body">
-                              Some text inside the toast body
-                            </div>
-                          </div> -->
-                          <td>
-                            <div class="d-flex align-items-center">
-                              <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
-                                <i class="typcn typcn-edit btn-icon-append"></i>                          
-                              </button>
-                              <button type="button" class="btn btn-danger btn-sm btn-icon-text">
-                                <i class="fa fa-trash"></i>                         
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                            <td>#ID236</td>
-                            <td>Tomy</td>
-                            <td>10</td>
-                            <td>Dress</td>
-                            <td>Saree</td>
-                            <td>02-04-2022</td>
-                            <td></td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
-                                  <i class="typcn typcn-edit btn-icon-append"></i>                          
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm btn-icon-text">
-                                  <i class="fa fa-trash"></i>                         
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>#ID237</td>
-                            <td>Vaishna</td>
-                            <td>05</td>
-                            <td>Dress</td>
-                            <td>Saree</td>
-                            <td>02-04-2022</td>
-                            <td></td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
-                                  <i class="typcn typcn-edit btn-icon-append"></i>                          
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm btn-icon-text">
-                                  <i class="fa fa-trash"></i>                         
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>#ID238</td>
-                            <td>Dhyan</td>
-                            <td>0</td>
-                            <td>Dress</td>
-                            <td>Saree</td>
-                            <td>02-04-2022</td>
-                            <td></td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
-                                  <i class="typcn typcn-edit btn-icon-append"></i>                          
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm btn-icon-text">
-                                  <i class="fa fa-trash"></i>                         
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                        <!-- <tr>
-                          <td>Messsy</td>
-                          <td>Flash</td>
-                          <td class="text-danger"> 21.06% <i class="typcn typcn-arrow-down-thick"></i></td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                          <td>John</td>
-                          <td>Premier</td>
-                          <td class="text-danger"> 35.00% <i class="typcn typcn-arrow-down-thick"></i></td>
-                          <td><label class="badge badge-info">Fixed</label></td>
-                        </tr>
-                        <tr>
-                          <td>Peter</td>
-                          <td>After effects</td>
-                          <td class="text-success"> 82.00% <i class="typcn typcn-arrow-up-thick"></i></td>
-                          <td><label class="badge badge-success">Completed</label></td>
-                        </tr>
-                        <tr>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td class="text-success"> 98.05% <i class="typcn typcn-arrow-up-thick"></i></td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr> -->
-                      </tbody>
-                    </table>
-                  </div>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputName1">Product Name</label>
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelectGender">Category</label>
+                          <select class="form-control" id="exampleSelectGender">
+                            <option>Dress</option>
+                            <option>Dress1</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelectGender">Sub-Category</label>
+                          <select class="form-control" id="exampleSelectGender">
+                            <option>Saree</option>
+                            <option>Top</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Product Quantity</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Product Price</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Product Unit</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Unit">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Product review</label>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Product Offer</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Offer">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Discount Price</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Price">
+                    </div>
+                    <div class="form-group">
+                      <label>File upload</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- <div class="form-group">
+                      <label for="exampleInputCity1">City</label>
+                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleTextarea1">Textarea</label>
+                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -555,24 +493,21 @@
   <!-- base:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="../../js/off-canvas.js"></script>
   <script src="../../js/hoverable-collapse.js"></script>
   <script src="../../js/template.js"></script>
   <script src="../../js/settings.js"></script>
   <script src="../../js/todolist.js"></script>
-  
-<script>
-  $(document).ready(function(){
-    $("#liveToastBtn").click(function(){
-      $('.toast').toast('show');
-    });
-  });
-  </script>
   <!-- endinject -->
+  <!-- plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
   <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
   <!-- End custom js for this page-->
 </body>
 
