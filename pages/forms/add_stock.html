@@ -239,27 +239,6 @@
           <div id="settings-trigger">
             <i class="typcn typcn-cog-outline"></i>
           </div>
-          <div id="theme-settings" class="settings-panel">
-            <i class="settings-close typcn typcn-times"></i>
-            <p class="settings-heading">SIDEBAR SKINS</p>
-            <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-              <div class="img-ss rounded-circle bg-light border mr-3"></div>
-              Light
-            </div>
-            <div class="sidebar-bg-options" id="sidebar-dark-theme">
-              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
-              Dark
-            </div>
-            <p class="settings-heading mt-2">HEADER SKINS</p>
-            <div class="color-tiles mx-0 px-4">
-              <div class="tiles success"></div>
-              <div class="tiles warning"></div>
-              <div class="tiles danger"></div>
-              <div class="tiles info"></div>
-              <div class="tiles dark"></div>
-              <div class="tiles default"></div>
-            </div>
-          </div>
         </div>
         <div id="right-sidebar" class="settings-panel">
           <i class="settings-close typcn typcn-times"></i>
@@ -577,7 +556,7 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
-              <div class="col-8 grid-margin stretch-card">
+              <div class="col-12 col-lg-8 mx-auto grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add Stock</h4>
@@ -585,42 +564,54 @@
                     Basic form elements
                   </p> -->
                     <form class="forms-sample">
-                      <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputName1"
-                          placeholder="Name"
-                        />
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="exampleInputName1">Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInputName1"
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="exampleInputName1">Category</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInputName1"
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1">Category</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputName1"
-                          placeholder="Name"
-                        />
+                     <div class="row">
+                      <div class="col-6">
+                        <div class="form-group">
+                          <label for="exampleInputName1">Sub-Category Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                            placeholder="Sub-Category"
+                          />
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1">Sub-Category Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputName1"
-                          placeholder="Sub-Category"
-                        />
+                      <div class="col-6">
+                        <div class="form-group">
+                          <label for="exampleInputName1">Quantity</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputName1"
+                            placeholder="Quantity"
+                          />
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1">Quantity</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputName1"
-                          placeholder="Quantity"
-                        />
-                      </div>
+                     </div>
                       <button type="submit" class="btn btn-primary mr-2">
                         Submit
                       </button>
