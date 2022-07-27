@@ -7,22 +7,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>PolluxUI Admin</title>
+    <title>Admin</title>
     <!-- base:css -->
     <link rel="stylesheet" href="../../vendors/typicons/typicons.css" />
     <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css" />
     <!-- endinject -->
-    <!-- plugin css for this page -->
-    <link rel="stylesheet" href="../../vendors/select2/select2.min.css" />
-    <link
-      rel="stylesheet"
-      href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css"
-    />
-    <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../css/vertical-layout-light/style.css" />
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"
+    />
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
   </head>
 
   <body>
@@ -237,8 +239,25 @@
         <!-- partial:../../partials/_settings-panel.html -->
         <div class="theme-setting-wrapper">
           <div id="settings-trigger">
-            <i class="typcn typcn-cog-outline"></i>
+            <a href="/pages/add_stock.html"
+              ><i class="fa fa-plus" aria-hidden="true"></i
+            ></a>
           </div>
+          <!-- <div id="theme-settings" class="settings-panel">
+          <i class="settings-close typcn typcn-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div> -->
         </div>
         <div id="right-sidebar" class="settings-panel">
           <i class="settings-close typcn typcn-times"></i>
@@ -483,71 +502,46 @@
               <a class="nav-link" href="#">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Home Page</span>
-                <!-- <i class="menu-arrow"></li> -->
+              
               </a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                data-toggle="collapse"
-                href="#form-elements"
-                aria-expanded="false"
-                aria-controls="form-elements"
-              >
-                <i class="typcn typcn-film menu-icon"></i>
+              <a class="nav-link" href="/pages/subcategory_list.html">
+                <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Category</span>
-                <i class="menu-arrow"></i>
+              
               </a>
-              <div class="collapse" id="form-elements">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/pages/tables/category_list.html"
-                      >Add Category</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="/pages/tables/subcategory_list.html"
-                      >Add Sub-Category</a
-                    >
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/tables/product_list.html">
+              <a class="nav-link" href="/pages/product_list.html">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Product</span>
-                <!-- <i class="menu-arrow"></li> -->
+              
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/tables/order_list.html">
+              <a class="nav-link" href="/pages/order_list.html">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Order</span>
-                <!-- <i class="menu-arrow"></li> -->
+             
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/tables/stock_list.html">
+              <a class="nav-link" href="/pages/stock_list.html">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Inventory</span>
-                <!-- <i class="menu-arrow"></li> -->
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/tables/user_list.html">
+              <a class="nav-link" href="/pages/user_list.html">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">User Details</span>
-                <!-- <i class="menu-arrow"></li> -->
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="typcn typcn-th-small-outline menu-icon"></i>
                 <span class="menu-title">Product review</span>
-                <!-- <i class="menu-arrow"></li> -->
               </a>
             </li>
           </ul>
@@ -556,154 +550,195 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
-              <div class="col-12 col-lg-8 mx-auto grid-margin stretch-card">
+              <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Add Product</h4>
+                    <h4 class="card-title">Stock</h4>
                     <!-- <p class="card-description">
-                    Basic form elements
+                    Add class <code>.table-hover</code>
                   </p> -->
-                    <form class="forms-sample">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleInputName1">Product Name</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="exampleInputName1"
-                              placeholder="Name"
-                            />
+                    <div class="p-0 m-0 w-100">
+                      <div class="row w-100">
+                        <div class="col-2 bg-primary d-flex flex-row">
+                          <div class="p-3 py-4">
+                            <h2>
+                              <i
+                                class="fa fa-shopping-cart text-white"
+                                aria-hidden="true"
+                              ></i>
+                            </h2>
+                          </div>
+                          <div class="p-3 text-white py-4">
+                            <h5>In Stock</h5>
+                            <h5>100</h5>
                           </div>
                         </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleSelectGender">Category</label>
-                            <select
-                              class="form-control"
-                              id="exampleSelectGender"
-                            >
-                              <option>Dress</option>
-                              <option>Dress1</option>
-                            </select>
+                        <div class="col-2 bg-primary d-flex flex-row ml-2">
+                          <div class="p-3 py-4">
+                            <h2>
+                              <i
+                                class="fa fa-shopping-cart text-white"
+                                aria-hidden="true"
+                              ></i>
+                            </h2>
+                          </div>
+                          <div class="p-3 py-4 text-white">
+                            <h5>Out stock</h5>
+                            <h5>100</h5>
                           </div>
                         </div>
-                      </div>
-                     <div class="row">
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="exampleSelectGender">Sub-Category</label>
-                          <select class="form-control" id="exampleSelectGender">
-                            <option>Saree</option>
-                            <option>Top</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputName1">Product Quantity</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputName1"
-                            placeholder="Product Quantity"
-                          />
-                        </div>
-                      </div>
-                     </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleInputName1">Product Price</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="exampleInputName1"
-                              placeholder="Product Price"
-                            />
+                        <!-- <div class="col bg-primary d-flex flex-row ml-2">
+                          <div class="p-3 py-4">
+                            <h2>
+                              <i
+                                class="fa fa-check text-white"
+                                aria-hidden="true"
+                              ></i>
+                            </h2>
                           </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleInputName1">Product Unit</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="exampleInputName1"
-                              placeholder="Product Unit"
-                            />
+                          <div class="px-1 py-4 text-white">
+                            <h5>Order Completed</h5>
+                            <h5>100</h5>
                           </div>
-                        </div>
+                        </div> -->
+                        <!-- <div class="col">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-sort p-2" aria-hidden="true"></i>More filters
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </div>
+                        </div> -->
                       </div>
-                      <div class="form-group">
-                        <label for="exampleTextarea1">Product review</label>
-                        <textarea
-                          class="form-control"
-                          id="exampleTextarea1"
-                          rows="4"
-                        ></textarea>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleInputName1">Product Offer</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="exampleInputName1"
-                              placeholder="Product Offer"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="exampleInputName1">Discount Price</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="exampleInputName1"
-                              placeholder="Product Price"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>File upload</label>
-                        <input
-                          type="file"
-                          name="img[]"
-                          class="file-upload-default"
-                        />
-                        <div class="input-group col-xs-12">
-                          <input
-                            type="text"
-                            class="form-control file-upload-info"
-                            disabled
-                            placeholder="Upload Image"
-                          />
-                          <span class="input-group-append">
-                            <button
-                              class="file-upload-browse btn btn-primary"
-                              type="button"
-                            >
-                              Upload
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-                      <!-- <div class="form-group">
-                      <label for="exampleInputCity1">City</label>
-                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleTextarea1">Textarea</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                    </div> -->
-                      <button type="submit" class="btn btn-primary mr-2">
-                        Submit
-                      </button>
-                      <button class="btn btn-light">Cancel</button>
-                    </form>
+                    <div class="mt-5">
+                      <h4>Stock List</h4>
+                      <!-- <button type="button" class="btn float-sm-right"><a href="/pages/tables/order_details.html">Order Details</a></button> -->
+                      <div class="table-responsive">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Stock ID</th>
+                              <th>Category Name</th>
+                              <th>Sub-Category</th>
+                              <th>Name</th>
+                              <th>quantity</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>#ID235</td>
+                              <td>Dress</td>
+                              <td><span class="border bg-secondary " style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Top</span><span class="border bg-secondary" style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Top</span></td>
+                              <td>aaa</td>
+                              <td>231</td>
+                              <td>
+                                <div class="d-flex align-items-center">
+                                  <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
+                                    <i class="typcn typcn-edit btn-icon-append"></i>                          
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-sm btn-icon-text">
+                                    <i class="fa fa-trash"></i>                         
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Category Name</th>
+                          <th>Sub-Category Name</th>
+                          <th>Image</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#ID235</td>
+                          <td>Dress</td>
+                          <td><span class="border bg-secondary " style="color: white;
+                            border-radius: 20px;
+                            padding: 0.5em 1.5em;
+                        ">Top</span><span class="border bg-secondary" style="color: white;
+                            border-radius: 20px;
+                            padding: 0.5em 1.5em;
+                        ">Top</span></td>
+                          <td></td>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
+                                <i class="typcn typcn-edit btn-icon-append"></i>                          
+                              </button>
+                              <button type="button" class="btn btn-danger btn-sm btn-icon-text">
+                                <i class="fa fa-trash"></i>                         
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>#ID236</td>
+                            <td>Dress</td>
+                            <td><span class="border bg-secondary " style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Dress</span><span class="border bg-secondary" style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Dress</span></td>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
+                                  <i class="typcn typcn-edit btn-icon-append"></i>                          
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm btn-icon-text">
+                                  <i class="fa fa-trash"></i>                         
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#ID237</td>
+                            <td>Dress</td>
+                            <td><span class="border bg-secondary " style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Shirt</span><span class="border bg-secondary" style="color: white;
+                                border-radius: 20px;
+                                padding: 0.5em 1.5em;
+                            ">Shirt</span></td>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">
+                                  <i class="typcn typcn-edit btn-icon-append"></i>                          
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm btn-icon-text">
+                                  <i class="fa fa-trash"></i>                         
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div> -->
                   </div>
                 </div>
               </div>
@@ -752,21 +787,28 @@
     <!-- base:js -->
     <script src="../../vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
     <!-- inject:js -->
     <script src="../../js/off-canvas.js"></script>
     <script src="../../js/hoverable-collapse.js"></script>
     <script src="../../js/template.js"></script>
     <script src="../../js/settings.js"></script>
     <script src="../../js/todolist.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#liveToastBtn").click(function () {
+          $(".toast").toast("show");
+        });
+      });
+      $(document).ready(function () {
+        $("#dtBasicExample").DataTable();
+        $(".dataTables_length").addClass("bs-select");
+      });
+    </script>
     <!-- endinject -->
-    <!-- plugin js for this page -->
-    <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
-    <script src="../../vendors/select2/select2.min.js"></script>
-    <!-- End plugin js for this page -->
     <!-- Custom js for this page-->
-    <script src="../../js/file-upload.js"></script>
-    <script src="../../js/typeahead.js"></script>
-    <script src="../../js/select2.js"></script>
     <!-- End custom js for this page-->
   </body>
 </html>

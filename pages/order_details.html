@@ -10,14 +10,13 @@
   <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
-  <!-- plugin css for this page -->
-  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
-  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
-  <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">   
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"> </script>  
 </head>
 
 <body>
@@ -26,9 +25,8 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg"
-              alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="typcn typcn-th-menu"></span>
           </button>
@@ -38,7 +36,7 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="../../images/faces/face5.jpg" alt="profile" />
+              <img src="../../images/faces/face5.jpg" alt="profile"/>
               <span class="nav-profile-name">Eugenia Mullins</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -53,7 +51,7 @@
             </div>
           </li>
           <li class="nav-item nav-user-status dropdown">
-            <p class="mb-0">Last login was 23 hours ago.</p>
+              <p class="mb-0">Last login was 23 hours ago.</p>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
@@ -64,17 +62,15 @@
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-              id="messageDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
               <i class="typcn typcn-cog-outline mx-0"></i>
               <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="messageDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal">David Grey
@@ -86,7 +82,7 @@
               </a>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
@@ -98,7 +94,7 @@
               </a>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
@@ -111,13 +107,11 @@
             </div>
           </li>
           <li class="nav-item dropdown mr-0">
-            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
-              id="notificationDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
               <i class="typcn typcn-bell mx-0"></i>
               <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="notificationDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
@@ -148,7 +142,7 @@
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-info">
-                    <i class="typcn typcn-user mx-0"></i>
+                    <i class="typcn typcn-user mx-0"></i> 
                   </div>
                 </div>
                 <div class="preview-item-content">
@@ -161,8 +155,7 @@
             </div>
           </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-          data-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="typcn typcn-th-menu"></span>
         </button>
       </div>
@@ -171,23 +164,35 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><i class="typcn typcn-cog-outline"></i></div>
+        <div id="settings-trigger"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+        <!-- <div id="theme-settings" class="settings-panel">
+          <i class="settings-close typcn typcn-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div> -->
       </div>
       <div id="right-sidebar" class="settings-panel">
         <i class="settings-close typcn typcn-times"></i>
         <ul class="nav nav-tabs" id="setting-panel" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
-              aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
-              aria-controls="chats-section">CHATS</a>
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
           </li>
         </ul>
         <div class="tab-content" id="setting-content">
-          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
-            aria-labelledby="todo-section">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
             <div class="add-items d-flex px-3 mb-0">
               <form class="form w-100">
                 <div class="form-group d-flex">
@@ -266,13 +271,11 @@
           <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
             <div class="d-flex align-items-center justify-content-between border-bottom">
               <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
-              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
-                All</small>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
             </div>
             <ul class="chat-list">
               <li class="list active">
-                <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
                   <p>Thomas Douglas</p>
                   <p>Available</p>
@@ -280,8 +283,7 @@
                 <small class="text-muted my-auto">19 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
                 <div class="info">
                   <div class="wrapper d-flex">
                     <p>Catherine</p>
@@ -292,8 +294,7 @@
                 <small class="text-muted my-auto">23 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
                   <p>Daniel Russell</p>
                   <p>Available</p>
@@ -301,8 +302,7 @@
                 <small class="text-muted my-auto">14 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
                 <div class="info">
                   <p>James Richardson</p>
                   <p>Away</p>
@@ -310,8 +310,7 @@
                 <small class="text-muted my-auto">2 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
                   <p>Madeline Kennedy</p>
                   <p>Available</p>
@@ -319,8 +318,7 @@
                 <small class="text-muted my-auto">5 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span>
-                </div>
+                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
                   <p>Sarah Graves</p>
                   <p>Available</p>
@@ -346,49 +344,46 @@
             <a class="nav-link" href="#">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Home Page</span>
-              <!-- <i class="menu-arrow"></li> -->
+            
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/tables/subcategory_list.html">
+            <a class="nav-link" href="/pages/subcategory_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Category</span>
             
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/tables/product_list.html">
+            <a class="nav-link" href="/pages/product_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Product</span>
-              <!-- <i class="menu-arrow"></li> -->
+            
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/tables/order_list.html">
+            <a class="nav-link" href="/pages/order_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Order</span>
-              <!-- <i class="menu-arrow"></li> -->
+           
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/tables/stock_list.html">
+            <a class="nav-link" href="/pages/stock_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Inventory</span>
-              <!-- <i class="menu-arrow"></li> -->
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/tables/user_list.html">
+            <a class="nav-link" href="/pages/user_list.html">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">User Details</span>
-              <!-- <i class="menu-arrow"></li> -->
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Product review</span>
-              <!-- <i class="menu-arrow"></li> -->
             </a>
           </li>
         </ul>
@@ -397,58 +392,48 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-12 col-lg-8 mx-auto grid-margin stretch-card">
+            <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                   <div class="row">
-                    <div class="col-6">
-                      <h4 class="card-title">Add Sub-Category</h4>
-                      <form class="forms-sample">
-                        <div class="form-group">
-                          <label for="exampleInputName1">Category Name</label>
-                          <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputName1">Sub-Category Name</label>
-                          <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                          <label>File upload</label>
-                          <input type="file" name="img[]" class="file-upload-default">
-                          <div class="input-group col-xs-12">
-                            <input type="text" class="form-control file-upload-info" disabled
-                              placeholder="Upload Image">
-                            <span class="input-group-append">
-                              <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                            </span>
-                          </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-6">
-                      <h4 class="card-title">Add Category</h4>
-                     
-                        <div class="form-group">
-                          <label for="exampleInputName1">Category Name</label>
-                          <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                          <label>File upload</label>
-                          <input type="file" name="img[]" class="file-upload-default">
-                          <div class="input-group col-xs-12">
-                            <input type="text" class="form-control file-upload-info" disabled
-                              placeholder="Upload Image">
-                            <span class="input-group-append">
-                              <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                            </span>
-                          </div>
-                        </div>
-                        <div class=" float-right mt-4">
-                          <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                          <button class="btn btn-light">Cancel</button>
-                        </div>
-                      </form>
-                    </div>
+                  <h4 class="card-title">Order Details List</h4>
+                     <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Order ID</th>
+                          <th>User Name</th>
+                          <th>Category</th>
+                          <th>Sub-Category</th>
+                          <th>E-mail</th>
+                          <th>Ph.Number</th>
+                          <th>Address</th>
+                          <th>Location</th>
+                          <th>Order Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#ID235</td>
+                          <td>Tomy</td>
+                          <td>Dress</td>
+                          <td><span class="border bg-secondary " style="color: white;
+                            border-radius: 20px;
+                            padding: 0.5em 1.5em;
+                        ">Top</span><span class="border bg-secondary" style="color: white;
+                            border-radius: 20px;
+                            padding: 0.5em 1.5em;
+                        ">Top</span></td>
+                          <td>tomy@gmail.com</td>
+                          <td>1234567890</td>
+                          <td>House No:SKLN23</td>
+                          <td>Kaloor</td>
+                          <td>
+                            <span class="border" style="background-color: grey;border-radius: 20px;
+                            padding: 0.5em 1.5em;">Awaiting Payment</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -458,18 +443,14 @@
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a
-                    href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All
-                  rights reserved.</span>
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center text-muted">Free <a
-                    href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrap dashboard</a>
-                  templates from Bootstrapdash.com</span>
-              </div>
-            </div>
-          </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center text-muted">Free <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrap dashboard</a> templates from Bootstrapdash.com</span>
+                    </div>
+                </div>    
+            </div>        
         </footer>
         <!-- partial -->
       </div>
@@ -481,21 +462,28 @@
   <!-- base:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="../../js/off-canvas.js"></script>
   <script src="../../js/hoverable-collapse.js"></script>
   <script src="../../js/template.js"></script>
   <script src="../../js/settings.js"></script>
   <script src="../../js/todolist.js"></script>
+  
+<script>
+  $(document).ready(function(){
+    $("#liveToastBtn").click(function(){
+      $('.toast').toast('show');
+    });
+  });
+  $(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+  </script>
   <!-- endinject -->
-  <!-- plugin js for this page -->
-  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
-  <script src="../../vendors/select2/select2.min.js"></script>
-  <!-- End plugin js for this page -->
   <!-- Custom js for this page-->
-  <script src="../../js/file-upload.js"></script>
-  <script src="../../js/typeahead.js"></script>
-  <script src="../../js/select2.js"></script>
   <!-- End custom js for this page-->
 </body>
 
