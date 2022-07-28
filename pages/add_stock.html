@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>PolluxUI Admin</title>
+    <title>Admin</title>
     <!-- base:css -->
     <link rel="stylesheet" href="../../vendors/typicons/typicons.css" />
     <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css" />
@@ -534,7 +534,7 @@
               <div class="col-12 col-lg-8 mx-auto grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Add Stock</h4>
+                    <h4 class="card-title">Stock</h4>
                     <!-- <p class="card-description">
                     Basic form elements
                   </p> -->
@@ -542,7 +542,6 @@
                       <div class="row">
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="exampleInputName1">Name</label>
                             <input
                               type="text"
                               class="form-control"
@@ -553,12 +552,11 @@
                         </div>
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="exampleInputName1">Category</label>
                             <input
                               type="text"
                               class="form-control"
                               id="exampleInputName1"
-                              placeholder="Name"
+                              placeholder="Category"
                             />
                           </div>
                         </div>
@@ -566,7 +564,6 @@
                      <div class="row">
                       <div class="col-6">
                         <div class="form-group">
-                          <label for="exampleInputName1">Sub-Category Name</label>
                           <input
                             type="text"
                             class="form-control"
@@ -576,14 +573,26 @@
                         </div>
                       </div>
                       <div class="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputName1">Quantity</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputName1"
-                            placeholder="Quantity"
-                          />
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="form-group">
+                              <select class="form-control" id="exampleSelectGender">
+                                <option>Quantity</option>
+                                <option>kg</option>
+                                <option>l</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="exampleInputName1"
+                                placeholder="Quantity"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                      </div>
